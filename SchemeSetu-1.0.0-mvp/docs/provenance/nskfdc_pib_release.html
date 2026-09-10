@@ -1,0 +1,1028 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" /><link id="pibA11yCss" rel="stylesheet" href="/css/accessibility.css?v=3" type="text/css" />
+      <script type="text/javascript">
+        /* Stamps the saved theme on <html> before the page paints. The
+           switcher in js/accessibility.js settles the rest, but on inner
+           pages it does not run until the end of the body and inside the
+           release frame it is a separate download - either way the reader
+           would otherwise watch a light page turn dark in front of them. */
+        (function (d) {
+            var t = "";
+            try {
+                t = window.localStorage.getItem("pibStyle") || "";
+            } catch (e) {
+                t = "";
+            }
+            if (t === "orange") {
+                t = "yellow";
+            }
+            var c = t === "change" ? " pib-hc"
+                : t === "green" ? " pib-theme-green"
+                : t === "yellow" ? " pib-theme-yellow" : "";
+            d.documentElement.className += c + " pib-a11y-content";
+        }(document));
+      </script>
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="/js/accessibility.js?v=7"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" /><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: #444;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
+      <script>
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+
+
+
+            gtag('config', 'UA-112591026-1');
+
+      </script>
+
+<meta property="og:title" content="MoU signed between Ministry of Social Justice &amp; Empowerment and National Safai Karamcharis Finance &amp; Development Corporation" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1953523" /><meta property="og:description" content="A momentous collaboration has been cemented as the Ministry of Social Justice &amp; Empowerment and the " /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eaaujecooe2ukiabisid77madfvkdpm2-f-891e29459-clienttons-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":16,"ak.ipv":6,"ak.proto":"h2","ak.rid":"13ed0554","ak.r":53304,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":57470,"ak.gh":"59.92.30.20","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1788984730","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==4Yn1cTeIdNrGg0Q22VK6RGztAUHmZyN7dVMq0DAPZ2OU+Bk2RNlNygPQvALsOqj8kjh/0DheAKGnn4yF+a39BrdyxLXunOUpK60O+Rnz/guaSfGIAsFWLPlOrTRPwH/xu60cZs5SQzYFIVPiK6ELA9HSqaOGFkZDNz0StDwbyk14R79IZnXoywf5nCyxzMO7BBH+gn8GxngXODi2qssEqUcL6ky+DzFkCnrK0QU8bhGek43b4Wd1bCFaBdqg/gR8n2tKszMcqUf2FzZCcsMDznXOSeDX7R3o2Lm3tz9dA0V90uKLkl/vurKnkVsI7/O4HvakY+WT1eBRk5PZ6kJg5itJ1ea8XoI5gjqYvODgIoPBEQId4IQABX4BfKF6gzumJqnTXfdhEVeY2OYHxhwT+SbJObmBVV3oFk9UI9F8TrQ=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+      <form method="post" action="./PressReleasePage.aspx?PRID=1953523&amp;reg=48&amp;lang=2" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=b94hX14NMWluUQ9a73g0LYFvtKhY52TK8cbDkYB_F2GuPre4tdh-ebiiI4xuhXnRu6Q5dQjaQA4oN3PEeL0GrtKEyEY1&amp;t=638942408819057530" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=YwOa_0w_u3oCLFqmIIOf-XEz4GWZ1DuyQIpxIA4LVkywj39sZSps12NbK5wNl5XN9JF3m7d-ey7BFDgj6i0380qRQ5IMWCL54sYNVU1IjMmiOWpp0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_shmykYI80CxCNR43Ii1nLy9PBGhuSe6SPp3CEYu0wDEuLqDAuIcsXVNhTIgQn0iyiwPorMflXuK31FftDX9GnB0m366MCEoOmY-eKQ3YAO9xRL0gIigzgRbtbVOgSQkJbJpFg2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="e0n4gsFV1fRpFXHsnOR245UIGYNLdpk1irypjhZQ6yJxAJKJC+PMDmuCu7yR5LoYk421RCLG/SMY+sKMMrVNtBA1tlLLRKRMfhTcrmMrz+1fA86W6LVZ4unpYKkFhfP1GeuCTwUC4wo6PJGGLbStd04TobqlSSfKXi74B0s6/KsyH7Xb06M3Kpffq9CV5TUnh8n0+GGWkWWq3fhtgjDcdnh3x4Kxa+54H4xVduh6u+Y7+P61dCy4p7tEq8Rn0r1XUdlk/sBsCeh15UFX/l1J/n2FXH+leMBKzzingOdFZEh0XQd6" />
+</div>
+                              
+            <div id="templateCss"></div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</div>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="1953523" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Social Justice & Empowerment
+                        </div>
+                        
+                        <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2026/sep/ph_9768_20260902_10000501.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h2 id="Titleh2">
+                                    MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation
+                              </h2>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"></span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              Posted On:
+                30 AUG 2023 5:27PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">A momentous collaboration has been cemented as the Ministry of Social Justice &amp; Empowerment and the National Safai Karamcharis Finance and Development Corporation (NSKFDC) inked a Memorandum of Understanding (MoU) for the fiscal years 2023-24 and 2024-25. This strategic partnership aims to enhance the socio-economic upliftment of Safai Karamcharis, Manual Scavengers, Waste Pickers and their dependants. NSKFDC is continuously working for empowerment of these most vulnerable and deprived sections of society through its various loan based and non-loan-based schemes like Short Term Skill Development Training Programmes.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image001G11J.jpg" style="height:355px; width:540px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">It focuses on complete mechanization of Sewer and Septic Tank cleaning operation by providing soft loans at low rates of interest to Sanitation Workers, Urban Local Bodies. Capital subsidy ranging from 50 to 32 percent is provided to sanitation workers taking up mechanized cleaning works under Swachhta Udyami Yojana (SUY). Adequate training is provided free of cost to sanitation workers regarding safety precautions, use of PPE kits and operation and maintenance of cleaning machines and equipments.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">NSKFDC also provides loans upto Rs.1.00 lacs under its Mahila Samridhi Yojana and Micro Credit Finance Scheme. The overall rate of interest is 4% and 5%, respectively. The other loan schemes are General Term Loan and Green Business Schemes under which loans upto Rs.15.00 lacs and upto Rs.30.00 lacs respectively are provided with rate of interest at 6% and 1% rebate for women beneficiaries.</span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0024DZ1.jpg" style="height:271px; width:564px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">In FY 2022-23, NSKFDC has disbursed total loans of Rs.261.49 crores covering 43862 beneficiaries. About 80% of the beneficiaries are women. NSKFDC has set up a target to cover 52634 new beneficiaries in FY 2023-24 and 63161 new beneficiaries in FY 2024-25. NSKFDC has provided Skill development Training to 20686 sanitation workers and their dependents under SRMS and PM DAKSH Yojana during FY 2022-23. To strengthen the GOI initiatives for welfare of Safai Karamcharis, NSKFDC as per MoU shall be providing Skill Development Training to 11000 and 12500 beneficiaries in FY 2023-24 and FY 2024-25, respectively under PM DAKSH Yojana.</span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>MG/PD</strong></span></span></p>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(Release ID: 1953523)</span>
+                        <span id="lblViews">Visitor Counter : 2572</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">Read this release in: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1953545' target="_blank">
+                                          Urdu </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1953606' target="_blank">
+                                          Marathi </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1953572' target="_blank">
+                                          हिन्दी </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1953581' target="_blank">
+                                          Tamil </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1953615' target="_blank">
+                                          Telugu </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Social Justice & Empowerment
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          Posted On:
+                        30 AUG 2023 5:27PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">A momentous collaboration has been cemented as the Ministry of Social Justice &amp; Empowerment and the National Safai Karamcharis Finance and Development Corporation (NSKFDC) inked a Memorandum of Understanding (MoU) for the fiscal years 2023-24 and 2024-25. This strategic partnership aims to enhance the socio-economic upliftment of Safai Karamcharis, Manual Scavengers, Waste Pickers and their dependants. NSKFDC is continuously working for empowerment of these most vulnerable and deprived sections of society through its various loan based and non-loan-based schemes like Short Term Skill Development Training Programmes.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image001G11J.jpg" style="height:355px; width:540px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">It focuses on complete mechanization of Sewer and Septic Tank cleaning operation by providing soft loans at low rates of interest to Sanitation Workers, Urban Local Bodies. Capital subsidy ranging from 50 to 32 percent is provided to sanitation workers taking up mechanized cleaning works under Swachhta Udyami Yojana (SUY). Adequate training is provided free of cost to sanitation workers regarding safety precautions, use of PPE kits and operation and maintenance of cleaning machines and equipments.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">NSKFDC also provides loans upto Rs.1.00 lacs under its Mahila Samridhi Yojana and Micro Credit Finance Scheme. The overall rate of interest is 4% and 5%, respectively. The other loan schemes are General Term Loan and Green Business Schemes under which loans upto Rs.15.00 lacs and upto Rs.30.00 lacs respectively are provided with rate of interest at 6% and 1% rebate for women beneficiaries.</span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0024DZ1.jpg" style="height:271px; width:564px" /></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">In FY 2022-23, NSKFDC has disbursed total loans of Rs.261.49 crores covering 43862 beneficiaries. About 80% of the beneficiaries are women. NSKFDC has set up a target to cover 52634 new beneficiaries in FY 2023-24 and 63161 new beneficiaries in FY 2024-25. NSKFDC has provided Skill development Training to 20686 sanitation workers and their dependents under SRMS and PM DAKSH Yojana during FY 2022-23. To strengthen the GOI initiatives for welfare of Safai Karamcharis, NSKFDC as per MoU shall be providing Skill Development Training to 11000 and 12500 beneficiaries in FY 2023-24 and FY 2024-25, respectively under PM DAKSH Yojana.</span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>MG/PD</strong></span></span></p>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (Release ID: 1953523)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523&text=MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523&title=MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523&text=MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation&body=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1953523&title=MoU signed between Ministry of Social Justice & Empowerment and National Safai Karamcharis Finance & Development Corporation&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="MoU signed between Ministry of Social Justice &amp; Empowerment and National Safai Karamcharis Finance &amp; Development Corporation" />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>A momentous collaboration has been cemented as the Ministry of Social Justice &amp;amp; Empowerment and the National Safai Karamcharis Finance and Development Corporation (NSKFDC) inked a Memorandum of Understanding (MoU) for the fiscal years 2023-24 and 2024-25. This strategic partnership aims to enhance the socio-economic upliftment of Safai Karamcharis, Manual Scavengers, Waste Pickers and their dependants. NSKFDC is continuously working for empowerment of these most vulnerable and deprived sections of society through its various loan based and non-loan-based schemes like Short Term Skill Development Training Programmes.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image001G11J.jpg&quot; style=&quot;height:355px; width:540px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>It focuses on complete mechanization of Sewer and Septic Tank cleaning operation by providing soft loans at low rates of interest to Sanitation Workers, Urban Local Bodies. Capital subsidy ranging from 50 to 32 percent is provided to sanitation workers taking up mechanized cleaning works under Swachhta Udyami Yojana (SUY). Adequate training is provided free of cost to sanitation workers regarding safety precautions, use of PPE kits and operation and maintenance of cleaning machines and equipments.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:16px&quot;>NSKFDC also provides loans upto Rs.1.00 lacs under its Mahila Samridhi Yojana and Micro Credit Finance Scheme. The overall rate of interest is 4% and 5%, respectively. The other loan schemes are General Term Loan and Green Business Schemes under which loans upto Rs.15.00 lacs and upto Rs.30.00 lacs respectively are provided with rate of interest at 6% and 1% rebate for women beneficiaries.&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0024DZ1.jpg&quot; style=&quot;height:271px; width:564px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>In FY 2022-23, NSKFDC has disbursed total loans of Rs.261.49 crores covering 43862 beneficiaries. About 80% of the beneficiaries are women. NSKFDC has set up a target to cover 52634 new beneficiaries in FY 2023-24 and 63161 new beneficiaries in FY 2024-25. NSKFDC has provided Skill development Training to 20686 sanitation workers and their dependents under SRMS and PM DAKSH Yojana during FY 2022-23. To strengthen the GOI initiatives for welfare of Safai Karamcharis, NSKFDC as per MoU shall be providing Skill Development Training to 11000 and 12500 beneficiaries in FY 2023-24 and FY 2024-25, respectively under PM DAKSH Yojana.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>MG/PD&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: rgb(59, 89, 152);*/
+                        background-color: rgba(65,103,178,255);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: #000000;
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: rgb(77, 194, 71);*/
+                        background-color: rgba(13,191,67,255);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: rgb(219, 68, 55);*/
+                        background-color: #e2123d;
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: rgb(0, 119, 181);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: 20px !important;
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: 18px !important;
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 18px, #6e2b8b 18px, #6e2b8b 36px );
+                        border-top: 8px solid #9a2375;
+                        border-bottom: 8px solid #9a2375;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+          <script type="text/javascript">
+                const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                const countdownElement = document.getElementById("countdown");
+
+                const interval = setInterval(() => {
+                      const now = new Date().getTime();
+
+                      // BEFORE FESTIVAL — show days + hours left
+                      if (now < festivalStart) {
+                            const diff = festivalStart - now;
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                            countdownElement.innerHTML = `
+              ${days} Day${days !== 1 ? 's' : ''} 
+              ${hours} Hour${hours !== 1 ? 's' : ''} to go
+          `;
+
+                      }
+
+                      // DURING FESTIVAL — show 56th IFFI - Day X
+                      else if (now >= festivalStart && now <= festivalEnd) {
+                            const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                            countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                      }
+
+                      // AFTER FESTIVAL — new message
+                      else {
+                            countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                            // Width change logic
+                            const elements = document.querySelectorAll('.film-roll-badge');
+                            elements.forEach(el => el.style.width = "350px");
+
+                            clearInterval(interval);
+                      }
+
+                }, 1000);
+          </script>
+ <script type="text/javascript">
+
+               const miffStart = new Date("2026-06-15T00:00:00").getTime();
+               const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+
+               const miffElement = document.getElementById("miff");
+
+               if (miffElement) {
+
+                   const miffInterval = setInterval(() => {
+
+                       const now = new Date().getTime();
+
+                       // Before MIFF
+                       if (now < miffStart) {
+
+                           const diff = miffStart - now;
+                           const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                           const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        
+
+                   /*  miffElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to MIFF`;*/
+                           miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+
+
+                     }
+
+                       // During MIFF
+                       else if (now >= miffStart && now <= miffEnd) {
+
+                           const dayNumber =
+                               Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+
+                           miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                       }
+
+                       // After MIFF
+                       else {
+
+                           miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+
+                           document.querySelectorAll('.film-roll-badge')
+                               .forEach(el => el.style.width = "350px");
+
+                           clearInterval(miffInterval);
+                       }
+
+                   }, 1000);
+               }
+
+</script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="fNOCPPbu3TD1cvtGnCs1O5ukGB9uXAbAHQMbyO_-36xpv3KM3r2LodRVliarS_JM6EzFKLBjxucXguLcY5HxzC_Uuksi6RFwHdWhQVceOzrjWLumyP_htQ=="/></form>
+</body>
+</html>
+
